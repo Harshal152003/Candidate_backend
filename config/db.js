@@ -1,4 +1,4 @@
-// config/db.js
+
 import mongoose from "mongoose";
 import { MongoClient } from "mongodb";
 import dotenv from "dotenv";
@@ -18,7 +18,6 @@ export async function connectMongoose() {
   }
 }
 
-// We also export a MongoClient for GridFS operations (native driver)
 export async function createMongoClient() {
   const client = new MongoClient(MONGO_URI);
   await client.connect();

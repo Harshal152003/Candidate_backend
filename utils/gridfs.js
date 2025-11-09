@@ -10,7 +10,7 @@ export async function uploadBufferToGridFS(client, buffer, filename, contentType
         contentType,
       });
 
-      const fileId = uploadStream.id; // ✅ Capture ID here
+      const fileId = uploadStream.id; 
 
       uploadStream.on("error", (err) => reject(err));
 
@@ -32,7 +32,7 @@ export function streamFileFromGridFS(client, fileId, res) {
     const db = client.db(process.env.DB_NAME);
     const bucket = new mongodb.GridFSBucket(db);
 
-    // ✅ Ensure the ID is clean and valid
+  
     const cleanId = fileId.trim();
     const objectId = new mongodb.ObjectId(cleanId);
 

@@ -1,4 +1,4 @@
-// models/Candidate.js
+
 import mongoose from "mongoose";
 
 const candidateSchema = new mongoose.Schema({
@@ -7,9 +7,9 @@ const candidateSchema = new mongoose.Schema({
   positionAppliedFor: { type: String, required: true },
   currentPosition: { type: String, required: true },
   experienceYears: { type: Number, required: true },
-  resumeFileId: { type: mongoose.Schema.Types.ObjectId, required: true }, // GridFS id
+  resumeFileId: { type: mongoose.Schema.Types.ObjectId, required: true }, 
   resumeFilename: { type: String, required: true },
-  videoFileId: { type: mongoose.Schema.Types.ObjectId }, // GridFS id
+  videoFileId: { type: mongoose.Schema.Types.ObjectId }, 
   videoFilename: { type: String },
   createdAt: { type: Date, default: Date.now }
 });
